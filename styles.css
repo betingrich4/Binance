@@ -6,8 +6,8 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #14161a;
+    font-family: 'Poppins', sans-serif; /* Using a modern font similar to Binance */
+    background-color: #1b1b1b; /* Dark background similar to Binance */
     color: #eaeaea;
     display: flex;
     flex-direction: column;
@@ -19,17 +19,17 @@ body {
 /* Header */
 .header {
     margin-top: 30px;
-    color: #f3ba2f;
+    color: #f3ba2f; /* Binance yellow color */
 }
 
 .header h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
 .header p {
     font-size: 1rem;
-    color: #eaeaea;
+    color: #f3f3f3; /* Light gray for contrast */
     margin-bottom: 30px;
 }
 
@@ -47,8 +47,8 @@ body {
     width: 100%;
     padding: 12px;
     border: none;
-    background-color: #f3ba2f;
-    color: #14161a;
+    background-color: #f3ba2f; /* Binance yellow */
+    color: #1b1b1b; /* Dark background for text contrast */
     font-size: 1rem;
     font-weight: bold;
     border-radius: 5px;
@@ -57,7 +57,7 @@ body {
 }
 
 .nav-buttons button:hover {
-    background-color: #d99b1f;
+    background-color: #d99b1f; /* Darker yellow on hover */
 }
 
 /* Trends Section */
@@ -67,7 +67,7 @@ body {
 }
 
 .trends-section h2 {
-    color: #f3ba2f;
+    color: #f3ba2f; /* Binance yellow */
     margin-bottom: 20px;
 }
 
@@ -91,7 +91,7 @@ body {
 footer {
     margin-top: auto;
     padding: 10px;
-    color: #a9a9a9;
+    color: #a9a9a9; /* Light gray for footer text */
     font-size: 0.9rem;
 }
 
