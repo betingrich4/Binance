@@ -1,146 +1,119 @@
-/* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'poppins', sans-serif;
     margin: 0;
-    background-color: #121212; /* Dark background */
-    color: #ffffff; /* Text color */
+    padding: 0;
+    background-color: #181818; /* Dark background */
+    color: white;
 }
 
-h1, h2, h3 {
-    margin: 10px 0;
-}
-
-/* Header and Navigation */
-header {
-    background-color: #1c1c1c; /* Header background */
+.header, .footer {
+    background-color: #1A1A1A; /* Darker header/footer */
     padding: 10px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .top-bar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 10px; /* Added padding */
+    padding: 10px;
+    border-bottom: 1px solid #343434; /* Separator */
 }
 
-.profile-section {
+.profile {
     display: flex;
     align-items: center;
 }
 
-.profile-icon {
-    font-size: 24px;
+.profile i {
     margin-right: 10px;
+    font-size: 1.5em; /* Icon size */
 }
 
-.search-box {
-    padding: 8px;
-    margin-right: 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: #1e1e1e; /* Dark input background */
-    color: #ffffff; /* White text */
-}
-
-.balance {
-    margin-left: 10px;
-}
-
-.support-section {
-    display: flex;
-    align-items: center;
-}
-
-.support-icon, .messages-icon {
-    font-size: 24px;
+.support i {
     margin-left: 15px;
+    font-size: 1.5em; /* Icon size */
 }
 
-/* Market Overview */
 .market-overview {
     padding: 20px;
 }
 
-.market-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 20px 0;
+#market-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
 }
 
 .market-item {
-    background-color: #1e1e1e; /* Market item background */
-    color: #ffffff; /* Text color */
-    border-radius: 5px;
+    background-color: #1E1E1E; /* Card background */
+    border-radius: 10px;
     padding: 15px;
-    margin: 10px;
-    width: calc(33.333% - 20px); /* Three items per row */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
+    text-align: center;
+    transition: 0.3s;
 }
 
 .market-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Hover effect */
 }
 
-.change-indicator {
-    font-size: 14px; /* Smaller size for change indicator */
-    margin-left: 10px; /* Space between price and change indicator */
-}
-
-/* Footer */
-footer {
-    background-color: #1c1c1c; /* Footer background */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #1A1A1A; /* Dark footer */
     padding: 10px;
     display: flex;
-    justify-content: center; /* Center footer icons */
+    justify-content: space-around;
 }
 
-.footer-icons {
+.footer .nav-icons a {
+    color: white; /* Icon color */
+    font-size: 1.5em;
+}
+
+.footer .nav-icons a:hover {
+    color: #FFBF00; /* Hover color */
+}
+
+/* Login and Signup styles */
+.login-container, .signup-container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full height */
+    background-color: #181818; /* Dark background */
 }
 
-.footer-icon {
-    background: none;
+.login-container input, .signup-container input {
+    width: 300px; /* Input width */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #444; /* Border color */
+    background-color: #2A2A2A; /* Input background */
+    color: white; /* Input text color */
+}
+
+.login-container button, .signup-container button {
+    width: 300px; /* Button width */
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
     border: none;
-    color: #f0b90b; /* Binance yellow */
-    font-size: 24px;
-    margin: 0 10px;
+    background-color: #FFBF00; /* Button color */
+    color: black; /* Button text color */
     cursor: pointer;
-    transition: color 0.3s;
+    transition: 0.3s;
 }
 
-.footer-icon:hover {
-    color: #d9a508; /* Darker yellow on hover */
+.login-container button:hover, .signup-container button:hover {
+    background-color: #FF9F00; /* Button hover color */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .market-item {
-        width: calc(50% - 20px); /* Two items per row on smaller screens */
-    }
-
-    .search-box {
-        width: 100%; /* Full width on smaller screens */
-        margin: 10px 0;
-    }
-
-    .navbar {
-        flex-direction: column; /* Stack buttons vertically */
-    }
-
-    .nav-button {
-        width: 100%; /* Full width buttons */
-        margin: 5px 0;
-    }
-
-    .footer-icons {
-        flex-direction: row; /* Horizontal layout for footer on larger screens */
-    }
-
-    .footer-icon {
-        margin: 0 10px;
-    }
+h2 {
+    margin: 20px 0; /* Spacing */
+    color: #FFBF00; /* Title color */
 }
