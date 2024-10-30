@@ -3,38 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Binance Replica - Wallet</title>
+    <title>Wallet - Binance Replica</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">Binance Replica</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="markets.html">Markets</a>
-            <a href="trade.html">Trade</a>
-            <a href="login.html">Log In</a>
-        </nav>
+    <header class="header">
+        <h1>Wallet</h1>
+        <p>Manage your cryptocurrency transactions</p>
     </header>
 
-    <section class="wallet">
-        <h2>Wallet Balances</h2>
-        <div class="wallet-grid">
-            <div class="wallet-item">
-                <h3>Bitcoin (BTC)</h3>
-                <p>Balance: 0.00 BTC</p>
-            </div>
-            <div class="wallet-item">
-                <h3>Ethereum (ETH)</h3>
-                <p>Balance: 0.00 ETH</p>
-            </div>
-            <div class="wallet-item">
-                <h3>Binance Coin (BNB)</h3>
-                <p>Balance: 0.00 BNB</p>
-            </div>
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+        
+        
+        <button onclick="window.location.href='trading.html'">Trading</button>
+        <button onclick="window.location.href='wallet.html'">Wallet</button>
+        <button onclick="window.location.href='support.html'">Support</button>
+    </div>
+
+    <!-- Wallet Options -->
+    <section>
+        <h2>Wallet Options</h2>
+        <div class="card">
+            <h3>Buy Cryptocurrency</h3>
+            <p>Quickly purchase cryptocurrencies using various payment methods.</p>
+            <button onclick="window.location.href='buy.html'">Buy Now</button>
+        </div>
+        <div class="card">
+            <h3>Sell Cryptocurrency</h3>
+            <p>Sell your cryptocurrencies easily and efficiently.</p>
+            <button onclick="window.location.href='sell.html'">Sell Now</button>
+        </div>
+        <div class="card">
+            <h3>P2P Trading</h3>
+            <p>Engage in peer-to-peer trading with other users.</p>
+            <button onclick="window.location.href='p2p.html'">P2P Now</button>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <footer>
+        <p>© 2024 Binance Replica. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
