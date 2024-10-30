@@ -3,34 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Binance Replica - Trade</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMQ5f6J5qfGZxD2ldMT3ft0i5J/AXsOpR9uWQ8" crossorigin="anonymous">
+    <title>Trade - Binance Replica</title>
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">Binance Replica</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="markets.html">Markets</a>
-            <a href="wallet.html">Wallet</a>
-            <a href="login.html">Log In</a>
+    <header>
+        <div class="top-bar">
+            <div class="profile-section">
+                <div class="profile-icon"><i class="fas fa-user-circle"></i></div>
+                <input type="text" id="search" placeholder="Search..." class="search-box">
+                <div class="balance">Balance: $10,000</div>
+            </div>
+            <div class="support-section">
+                <div class="support-icon"><i class="fas fa-comments"></i></div>
+                <div class="messages-icon"><i class="fas fa-envelope"></i></div>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <button onclick="location.href='index.html'" class="nav-button">Home</button>
+            <button onclick="location.href='trade.html'" class="nav-button">Trade</button>
+            <button onclick="location.href='wallet.html'" class="nav-button">Wallet</button>
+            <button onclick="location.href='support.html'" class="nav-button">Support</button>
         </nav>
     </header>
 
-    <section class="trade">
-        <h2>Trading Interface</h2>
-        <div class="trade-container">
-            <div class="chart">
-                <h3>Price Chart</h3>
-                <p>[Chart Placeholder]</p>
-            </div>
-            <div class="order-form">
-                <h3>Place Order</h3>
-                <button class="buy-btn">Buy</button>
-                <button class="sell-btn">Sell</button>
-            </div>
+    <main>
+        <h1>Exchange Rates</h1>
+        <div id="exchange-rate-grid" class="market-grid">
+            <!-- Exchange rates will be dynamically loaded here -->
         </div>
-    </section>
+
+        <h1>Market Trends</h1>
+        <div id="trend-grid" class="market-grid">
+            <!-- Market trends will be dynamically loaded here -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-icons">
+            <button onclick="location.href='index.html'" class="footer-icon"><i class="fas fa-home"></i></button>
+            <button onclick="location.href='trade.html'" class="footer-icon"><i class="fas fa-exchange-alt"></i></button>
+            <button onclick="location.href='wallet.html'" class="footer-icon"><i class="fas fa-wallet"></i></button>
+            <button onclick="location.href='support.html'" class="footer-icon"><i class="fas fa-headset"></i></button>
+            <button onclick="location.href='profile.html'" class="footer-icon"><i class="fas fa-user"></i></button>
+        </div>
+    </footer>
+
+    <div id="login-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-login-modal" class="close">&times;</span>
+            <h2>Login</h2>
+            <form>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
