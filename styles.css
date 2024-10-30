@@ -45,28 +45,43 @@ body {
 
 .nav-buttons button {
     width: 100%;
-    padding: 12px;
+    padding: 15px; /* Increased padding for better touch targets */
     border: none;
     background-color: #f3ba2f; /* Binance yellow */
     color: #1b1b1b; /* Dark background for text contrast */
     font-size: 1rem;
     font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Added shadow for depth */
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .nav-buttons button:hover {
     background-color: #d99b1f; /* Darker yellow on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
 }
 
-/* Trends Section */
-.trends-section {
+/* Card Style for Feature Sections */
+.card {
+    background-color: #2e2e2e; /* Card background */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Shadow for card */
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    color: #f3ba2f; /* Yellow heading */
+}
+
+/* Section Styles */
+section {
     margin: 40px 0;
     text-align: center;
 }
 
-.trends-section h2 {
+section h2 {
     color: #f3ba2f; /* Binance yellow */
     margin-bottom: 20px;
 }
