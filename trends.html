@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphs and Trends - Binance Replica</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Graphs and Trends</h1>
+        <p>Analyze market trends and price movements</p>
+    </header>
+
+    <!-- Chart Container -->
+    <div class="chart-container">
+        <canvas id="priceChart"></canvas>
+    </div>
+
+    <div class="button-container">
+        <button onclick="window.location.href='index.html'">Back to Home</button>
+        <button onclick="updateChart()">Refresh Data</button>
+    </div>
+
+    <footer>
+        <p>© 2024 Binance Replica. All Rights Reserved.</p>
+    </footer>
+
+    <script src="trends.js"></script>
+</body>
+</html>
