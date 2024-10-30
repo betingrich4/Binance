@@ -3,31 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Binance Replica - Login</title>
+    <title>Login - Binance Replica</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">Binance Replica</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="markets.html">Markets</a>
-            <a href="trade.html">Trade</a>
-            <a href="signup.html">Sign Up</a>
-        </nav>
-    </header>
+    <!-- Login Container -->
+    <div class="login-container">
+        <h2>Login to Binance Replica</h2>
+        <form id="login-form">
+            <!-- Username Input -->
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required placeholder="Enter your username">
 
-    <section class="auth-form">
-        <h2>Log In</h2>
-        <form action="#">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            
+            <!-- Password Input with Show/Hide Toggle -->
+            <label for="password">Password</label>
+            <div class="password-field">
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+                <span id="toggle-password" class="toggle-password">Show</span>
+            </div>
+
+            <!-- Forgot Password Link -->
+            <div class="forgot-password">
+                <a href="forgot-password.html">Forgot Password?</a>
+            </div>
+
+            <!-- Submit Button -->
             <button type="submit">Log In</button>
         </form>
-    </section>
+    </div>
+
+    <script src="login.js"></script>
 </body>
 </html>
