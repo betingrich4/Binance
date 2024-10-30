@@ -4,16 +4,16 @@ body {
     margin: 0;
     padding: 0;
     background-color: #121212; /* Dark background */
-    color: white;
+    color: white; /* Text color */
 }
 
 header {
-    background-color: #1A1A1A; /* Dark header */
+    background-color: #1A1A1A; /* Header background */
     padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #343434; /* Separator */
+    border-bottom: 1px solid #343434; /* Border */
 }
 
 .top-bar {
@@ -30,6 +30,7 @@ header {
 .profile i, .support i {
     margin: 0 10px;
     font-size: 1.5em; /* Icon size */
+    color: #FFBF00; /* Icon color */
 }
 
 .support {
@@ -53,7 +54,7 @@ header {
     padding: 15px;
     text-align: center;
     transition: 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
 }
 
 .market-item:hover {
@@ -64,7 +65,7 @@ header {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #1A1A1A; /* Dark footer */
+    background-color: #1A1A1A; /* Footer background */
     padding: 10px;
     display: flex;
     justify-content: space-around;
@@ -127,6 +128,13 @@ h2 {
 .trend-icon {
     font-size: 0.8em; /* Smaller icon size */
     margin-left: 5px;
+}
+
+/* Candle Stick Chart Styles */
+.candle-stick {
+    height: 200px; /* Fixed height for chart */
+    background-color: #2A2A2A; /* Chart background */
+    margin: 15px 0; /* Margin */
 }
 
 /* Responsive Design */
