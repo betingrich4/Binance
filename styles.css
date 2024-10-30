@@ -1,52 +1,72 @@
-/* General styling for sections */
-.auth-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px;
-    background-color: #1a1d21;
-    color: #eaeaea;
+/* Login Container */
+.login-container {
     max-width: 400px;
-    margin: 50px auto;
-    border-radius: 5px;
-}
-
-.auth-form form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-
-.auth-form input {
-    padding: 10px;
-    margin: 10px 0;
+    margin: 100px auto;
+    padding: 20px;
     background-color: #1d1f23;
-    border: 1px solid #333;
-    border-radius: 3px;
+    border-radius: 8px;
+    text-align: center;
     color: #eaeaea;
 }
 
-.auth-form button {
-    padding: 10px;
-    background-color: #f3ba2f;
-    color: #1a1d21;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.login-container h2 {
+    color: #f3ba2f;
+    margin-bottom: 20px;
+}
+
+.login-container label {
+    display: block;
+    margin: 10px 0 5px;
+    text-align: left;
     font-weight: bold;
 }
 
-/* Wallet Styling */
-.wallet-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #2c2f33;
+    color: #eaeaea;
 }
 
-.wallet-item {
-    background-color: #1d1f23;
-    padding: 20px;
+.password-field {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #f3ba2f;
+    font-size: 0.9em;
+}
+
+.forgot-password {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.forgot-password a {
+    color: #f3ba2f;
+    text-decoration: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #f3ba2f;
+    color: #14161a;
+    font-size: 1em;
+    font-weight: bold;
     border-radius: 5px;
-    text-align: center;
-    color: #eaeaea;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #d99b1f;
 }
