@@ -10,132 +10,106 @@ body {
     background-color: #14161a;
     color: #eaeaea;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-    margin: 0;
-}
-
-/* Form Container */
-.form-container {
-    max-width: 400px;
-    width: 100%;
-    padding: 20px;
-    background-color: #1d1f23;
-    border-radius: 8px;
     text-align: center;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    min-height: 100vh;
 }
 
-.form-container h2 {
+/* Header */
+.header {
+    margin-top: 30px;
     color: #f3ba2f;
-    margin-bottom: 20px;
 }
 
-.form-container label {
-    display: block;
-    margin: 10px 0 5px;
-    text-align: left;
-    font-weight: bold;
+.header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-.form-container input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #333;
-    background-color: #2c2f33;
+.header p {
+    font-size: 1rem;
     color: #eaeaea;
+    margin-bottom: 30px;
 }
 
-.password-field {
-    position: relative;
+/* Navigation Buttons */
+.nav-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
 }
 
-.toggle-password {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    color: #f3ba2f;
-    font-size: 0.9em;
-}
-
-.redirect-text {
-    margin-top: 15px;
-    color: #a9a9a9;
-}
-
-.redirect-text a {
-    color: #f3ba2f;
-    text-decoration: none;
-}
-
-/* Buttons */
-button[type="submit"] {
+.nav-buttons button {
     width: 100%;
     padding: 12px;
     border: none;
     background-color: #f3ba2f;
     color: #14161a;
-    font-size: 1em;
+    font-size: 1rem;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button[type="submit"]:hover {
+.nav-buttons button:hover {
     background-color: #d99b1f;
 }
 
-/* Modal Styling (for login modal in login.html) */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background-color: #1d1f23;
-    padding: 20px;
-    border-radius: 5px;
-    width: 300px;
+/* Trends Section */
+.trends-section {
+    margin: 40px 0;
     text-align: center;
 }
 
-.modal-content h2 {
+.trends-section h2 {
     color: #f3ba2f;
+    margin-bottom: 20px;
 }
 
-.modal-content label {
-    display: block;
-    margin: 10px 0 5px;
-    color: #eaeaea;
-}
-
-.modal-content input {
+/* Chart Container */
+.chart-container {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #555;
-    border-radius: 4px;
-    background-color: #2c2f33;
-    color: #eaeaea;
+    max-width: 600px;
+    height: 300px; /* Fixed height for the chart */
+    margin: 0 auto;
 }
 
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #eaeaea;
-    font-size: 1.5em;
-    cursor: pointer;
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+/* Footer */
+footer {
+    margin-top: auto;
+    padding: 10px;
+    color: #a9a9a9;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (min-width: 600px) {
+    .nav-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-buttons button {
+        width: auto;
+        min-width: 150px;
+        margin: 5px;
+    }
+
+    .chart-container {
+        height: 400px; /* Increase chart height on larger screens */
+    }
 }
