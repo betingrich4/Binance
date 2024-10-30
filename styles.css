@@ -22,6 +22,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px; /* Added padding */
 }
 
 .profile-section {
@@ -57,37 +58,8 @@ header {
     margin-left: 15px;
 }
 
-/* Navbar */
-.navbar {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Wrap buttons on smaller screens */
-    margin-top: 10px;
-}
-
-.nav-button {
-    background-color: #f0b90b; /* Binance yellow */
-    color: #121212; /* Dark text color */
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    margin: 5px; /* Margin for spacing */
-    cursor: pointer;
-    transition: background-color 0.3s;
-    display: flex;
-    align-items: center;
-}
-
-.nav-button i {
-    margin-right: 5px; /* Space between icon and text */
-}
-
-.nav-button:hover {
-    background-color: #d9a508; /* Darker yellow on hover */
-}
-
-/* Main Content */
-main {
+/* Market Overview */
+.market-overview {
     padding: 20px;
 }
 
@@ -113,11 +85,9 @@ main {
     transform: translateY(-5px);
 }
 
-/* Chart styles */
-#candlestickChart {
-    width: 100%;
-    height: 400px; /* Set a fixed height for the chart */
-    margin: 20px 0; /* Space above and below the chart */
+.change-indicator {
+    font-size: 14px; /* Smaller size for change indicator */
+    margin-left: 10px; /* Space between price and change indicator */
 }
 
 /* Footer */
