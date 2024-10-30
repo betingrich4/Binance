@@ -6,6 +6,7 @@
     <title>Binance Replica</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
 </head>
 <body>
     <header>
@@ -33,6 +34,9 @@
     <main>
         <h1>Market Overview</h1>
         <div id="market-grid" class="market-grid"></div>
+        
+        <h2>Market Trends</h2>
+        <canvas id="candlestickChart"></canvas> <!-- Candlestick Chart Canvas -->
     </main>
 
     <footer>
