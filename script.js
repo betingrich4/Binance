@@ -12,6 +12,18 @@ const marketData = [
 
 // Elements
 const marketGrid = document.getElementById('market-grid');
+const ctx = document.getElementById('candlestickChart').getContext('2d');
+
+let candlestickData = {
+    labels: [],
+    datasets: [{
+        label: 'Market Trend',
+        data: [],
+        backgroundColor: 'rgba(76, 175, 80, 0.5)', // Green color for bullish
+        borderColor: 'rgba(76, 175, 80, 1)',
+        borderWidth: 1,
+    }],
+};
 
 // Load markets with dummy data
 function loadMarkets() {
@@ -33,18 +45,58 @@ function loadMarkets() {
     });
 }
 
-// Simulate price changes every few seconds
-function simulatePriceUpdates() {
-    marketData.forEach(market => {
-        // Randomly adjust the price by +/- 1%
-        const priceChange = market.price * (Math.random() * 0.02 - 0.01);
-        market.price = parseFloat((market.price + priceChange).toFixed(2));
-    });
-    loadMarkets();
+// Generate random candlestick data
+function generateRandomCandleData() {
+    const open = Math.random() * 100 + 100; // Random open price
+    const close = open + (Math.random() * 10 - 5); // Random close price within a range
+    const high = Math.max(open, close) + Math.random() * 5; // Highest price
+    const low = Math.min(open, close) - Math.random() * 5; // Lowest price
+    return { t: Date.now(), o: open, h: high, l: low, c: close };
 }
 
-// Set up interval for simulated price updates
-setInterval(simulatePriceUpdates, 3000); // Update every 3 seconds
+// Update chart data
+function updateCandlestickChart() {
+    const newCandle = generateRandomCandleData();
+    
+    // Add new data point
+    candlestickData.labels.push(new Date(newCandle.t).toLocaleTimeString());
+    candlestickData.datasets[0].data.push(newCandle);
+    
+    // Remove old data points if there are more than 20
+    if (candlestickData.labels.length > 20) {
+        candlestickData.labels.shift();
+        candlestickData.datasets[0].data.shift();
+    }
+
+    if (window.candlestickChart) {
+        window.candlestickChart.update(); // Update chart
+    } else {
+        // Initialize chart
+        window.candlestickChart = new Chart(ctx, {
+            type: 'candlestick',
+            data: candlestickData,
+            options: {
+                scales: {
+                    x: {
+                        type: 'time',
+                        time: {
+                            unit: 'minute'
+                        },
+                    },
+                    y: {
+                        beginAtZero: false
+                    }
+                },
+            }
+        });
+    }
+}
+
+// Simulate price changes every few seconds
+setInterval(() => {
+    loadMarkets(); // Update market items
+    updateCandlestickChart(); // Update candlestick chart
+}, 3000); // Update every 3 seconds
 
 // Initial load
 document.addEventListener('DOMContentLoaded', () => {
