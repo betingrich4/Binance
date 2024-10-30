@@ -3,34 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Binance Replica - Sign Up</title>
+    <title>Signup - Binance Replica</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">Binance Replica</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="markets.html">Markets</a>
-            <a href="trade.html">Trade</a>
-            <a href="login.html">Log In</a>
-        </nav>
-    </header>
+    <!-- Signup Container -->
+    <div class="form-container">
+        <h2>Create an Account</h2>
+        <form id="signup-form">
+            <!-- Username Field -->
+            <label for="signup-username">Username</label>
+            <input type="text" id="signup-username" name="username" required placeholder="Choose a username">
 
-    <section class="auth-form">
-        <h2>Sign Up</h2>
-        <form action="#">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+            <!-- Email Field -->
+            <label for="signup-email">Email</label>
+            <input type="email" id="signup-email" name="email" required placeholder="Enter your email">
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <!-- Password Field with Toggle -->
+            <label for="signup-password">Password</label>
+            <div class="password-field">
+                <input type="password" id="signup-password" name="password" required placeholder="Create a password">
+                <span id="toggle-signup-password" class="toggle-password">Show</span>
+            </div>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            
+            <!-- Confirm Password Field -->
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm your password">
+
+            <!-- Submit Button -->
             <button type="submit">Sign Up</button>
         </form>
-    </section>
+        <p class="redirect-text">Already have an account? <a href="login.html">Log In</a></p>
+    </div>
+
+    <script src="signup.js"></script>
 </body>
 </html>
